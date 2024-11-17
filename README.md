@@ -57,9 +57,13 @@ Completing the checkout process
 
 ## Usage
 How to Use the Project for Testing
+
 Access the Website: Visit the website at https://pay-pal-pioneers-068.vercel.app/
+
 Test Key Features: Go through the core functionalities (registration, login, cart, checkout) and verify if they work as expected.
+
 Cross-Browser Testing: Open the website on different browsers (e.g., Chrome, Firefox, Safari) and check if it works well.
+
 Report Bugs: If you encounter any issues, follow the bug report format below.
 
 ## Credentials
