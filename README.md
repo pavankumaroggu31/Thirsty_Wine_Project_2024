@@ -35,7 +35,7 @@ The mind map provides a visual overview of the testing process, showing how diff
 You can view the detailed mind map [here](<https://drive.google.com/file/d/1LsI6XLTKE6xJEvBw9PsOF3UC6eNOcVUE/view?usp=sharing>).
 
 ## Video Walkthrough of the project
-This is my video of the project presentation [her](<https://youtu.be/sjtR9o0qGDU>)
+This is my video of the project presentation [here](<https://youtu.be/sjtR9o0qGDU>)
 
 
 ## Features
