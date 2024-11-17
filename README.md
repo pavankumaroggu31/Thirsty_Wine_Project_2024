@@ -12,14 +12,24 @@ The deployed application can be accessed at:
 https://pay-pal-pioneers-068.vercel.app/
 
 ## Test Plan :
-The Test Plan outlines the testing strategy, scope, and objectives for evaluating the Thirsty Wine website. It includes detailed information on what aspects of the website will be tested, the testing approach, timelines, and deliverables. The test plan ensures that all critical features of the website are verified for functionality, usability, and security before the site is deployed to users.
+The Test Plan describes how we will test the Thirsty Wine website, what features will be tested, and the timeline for testing. It outlines the goals, approach, and schedule for ensuring the website works well and is secure. You can find the full Test Plan document [here](<https://drive.google.com/file/d/1eQ-8OU50bOsUHAO4HwMUaCRRmBySk7ZU/view?usp=sharing>)
 
-Key Elements of the Test Plan:
-Test Objectives: What the testing aims to achieve.
-Scope of Testing: The features and functionalities that will be tested.
-Testing Approach: The types of testing (functional, compatibility, usability, etc.) that will be performed.
-Test Schedule: The timeline for executing the tests.
-Entry & Exit Criteria: Conditions for starting and completing testing phases.
-You can find the full Test Plan document here.
+## Test Scenarios :
+The test scenarios cover various aspects of the Thirsty Wine website, ensuring that key features like user registration, login, and password recovery work as expected. These scenarios guide the testing process to validate both functionality and usability.
+You can view the detailed test scenarios [here](<https://docs.google.com/spreadsheets/d/1_My8rBnCUh2UbHPr5FDTUNRpugGyfCK1/edit?usp=sharing&ouid=110433349378414708907&rtpof=true&sd=true>)
 
+## Test Cases :
+The test cases cover both functional and usability testing for key features such as Forgot Password, Login, and Registration. These test cases ensure that the website works correctly and is easy to use for all users.
+You can view the detailed test cases [here](<https://docs.google.com/spreadsheets/d/11DXNosLJbXA4p_Pbn0GNsLLeHAlaSU8i/edit?usp=sharing&ouid=110433349378414708907&rtpof=true&sd=true>)
 
+## Bug Reports :
+During testing, defects were logged with detailed information, including steps to reproduce the issue and its severity. This helps track and resolve problems efficiently.
+You can find the full bug report [here](<https://docs.google.com/spreadsheets/d/1I3BFk2jcgnKkmbG65urGS1jD0z7Ln5q3/edit?usp=sharing&ouid=110433349378414708907&rtpof=true&sd=true>).
+
+## Test Summary Report :
+The test summary report gives an overview of the testing process, including what was tested, the results, and any issues found. It helps to understand the overall quality of the Thirsty Wine website.
+You can view the detailed test summary report [here](<https://drive.google.com/file/d/19m0JizVhzZXs3wdgZNx8QvWqsseh2dxg/view?usp=sharing>).
+
+## Mind Map :
+The mind map provides a visual overview of the testing process, showing how different features and test scenarios are connected. It helps to understand the structure of the testing plan and guide the testing efforts.
+You can view the detailed mind map [here](<https://drive.google.com/file/d/1LsI6XLTKE6xJEvBw9PsOF3UC6eNOcVUE/view?usp=sharing>).
