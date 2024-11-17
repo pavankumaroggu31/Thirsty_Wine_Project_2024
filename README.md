@@ -34,14 +34,6 @@ You can view the detailed test summary report [here](<https://drive.google.com/f
 The mind map provides a visual overview of the testing process, showing how different features and test scenarios are connected. It helps to understand the structure of the testing plan and guide the testing efforts.
 You can view the detailed mind map [here](<https://drive.google.com/file/d/1LsI6XLTKE6xJEvBw9PsOF3UC6eNOcVUE/view?usp=sharing>).
 
-## Video Walkthrough of the Project
-the main features of the Thirsty Wine website, including:
-User registration and login
-Browsing and searching for wines
-Adding products to the cart
-Completing the checkout process
-[Link to Video Walkthrough of Features]
-
 ## Features
 
 1.User Registration & Login
