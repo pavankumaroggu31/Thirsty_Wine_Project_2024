@@ -33,3 +33,49 @@ You can view the detailed test summary report [here](<https://drive.google.com/f
 ## Mind Map :
 The mind map provides a visual overview of the testing process, showing how different features and test scenarios are connected. It helps to understand the structure of the testing plan and guide the testing efforts.
 You can view the detailed mind map [here](<https://drive.google.com/file/d/1LsI6XLTKE6xJEvBw9PsOF3UC6eNOcVUE/view?usp=sharing>).
+
+## Video Walkthrough of the Project
+the main features of the Thirsty Wine website, including:
+User registration and login
+Browsing and searching for wines
+Adding products to the cart
+Completing the checkout process
+[Link to Video Walkthrough of Features]
+
+## Features
+1.User Registration & Login
+2.Product Browsing & Search
+3.Shopping Cart
+4.Checkout Process
+5.Payment Gateway
+6.Order Management
+7.User Reviews & Ratings
+8.Cross-Browser Compatibility
+9.Security Features
+10.Refunds/Returns
+11.Notifications
+
+## Usage
+How to Use the Project for Testing
+Access the Website: Visit the website at https://pay-pal-pioneers-068.vercel.app/
+Test Key Features: Go through the core functionalities (registration, login, cart, checkout) and verify if they work as expected.
+Cross-Browser Testing: Open the website on different browsers (e.g., Chrome, Firefox, Safari) and check if it works well.
+Report Bugs: If you encounter any issues, follow the bug report format below.
+
+## Credentials
+For testing purposes, use the following test accounts:
+Test User 1
+Username: pavankumar@gmail.com
+Password: 123456
+
+Test User 2
+Username: gurusmaran@gmail.com
+Password: 123456
+
+## Technology Stack
+The Thirsty Wine website is built using the following technologies:
+Testing Tools:
+Google Sheets – For documenting test cases and logging defects.
+Google docs
+Xmind Map
+Google Drive
