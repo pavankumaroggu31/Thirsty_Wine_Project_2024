@@ -43,16 +43,28 @@ Completing the checkout process
 [Link to Video Walkthrough of Features]
 
 ## Features
+
 1.User Registration & Login
+
 2.Product Browsing & Search
+
 3.Shopping Cart
+
 4.Checkout Process
+ 
+
 5.Payment Gateway
+
 6.Order Management
+
 7.User Reviews & Ratings
+
 8.Cross-Browser Compatibility
+
 9.Security Features
+
 10.Refunds/Returns
+
 11.Notifications
 
 ## Usage
