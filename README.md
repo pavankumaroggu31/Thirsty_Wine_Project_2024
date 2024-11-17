@@ -81,7 +81,11 @@ Password: 123456
 The Thirsty Wine website is built using the following technologies:
 
 Testing Tools:
+
 Google Sheets – For documenting test cases and logging defects.
+
 Google docs
+
 Xmind Map
+
 Google Drive
