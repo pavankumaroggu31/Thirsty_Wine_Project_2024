@@ -34,6 +34,10 @@ You can view the detailed test summary report [here](<https://drive.google.com/f
 The mind map provides a visual overview of the testing process, showing how different features and test scenarios are connected. It helps to understand the structure of the testing plan and guide the testing efforts.
 You can view the detailed mind map [here](<https://drive.google.com/file/d/1LsI6XLTKE6xJEvBw9PsOF3UC6eNOcVUE/view?usp=sharing>).
 
+## Video Walkthrough of the project
+This is my video of the project presentation [her](<https://youtu.be/sjtR9o0qGDU>)
+
+
 ## Features
 
 1.User Registration & Login
