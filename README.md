@@ -70,7 +70,7 @@ Access the Website: Visit the website at https://pay-pal-pioneers-068.vercel.app
 
 Test Key Features: Go through the core functionalities (registration, login, cart, checkout) and verify if they work as expected.
 
-Cross-Browser Testing: Open the website on different browsers (e.g., Chrome, Firefox, Safari) and check if it works well.
+Cross-Browser Testing: Open the website on different browsers (Chrome, Firefox, Safari) and check if it works well.
 
 Report Bugs: If you encounter any issues, follow the bug report format below.
 
@@ -78,11 +78,15 @@ Report Bugs: If you encounter any issues, follow the bug report format below.
 For testing purposes, use the following test accounts:
 
 Test User 1
+
 Username: pavankumar@gmail.com
+
 Password: 123456
 
 Test User 2
+
 Username: gurusmaran@gmail.com
+
 Password: 123456
 
 ## Technology Stack
