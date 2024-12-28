@@ -12,7 +12,7 @@ The deployed application can be accessed at:
 https://pay-pal-pioneers-068.vercel.app/
 
 ## Test Plan :
-The Test Plan describes how we will test the Thirsty Wine website, what features will be tested, and the timeline for testing. It outlines the goals, approach, and schedule for ensuring the website works well and is secure. You can find the full Test Plan document [here](<https://drive.google.com/file/d/1eQ-8OU50bOsUHAO4HwMUaCRRmBySk7ZU/view?usp=sharing>)
+The Test Plan describes how we will test the Thirsty Wine website, what features will be tested, and the timeline for testing. It outlines the goals, approach, and schedule for ensuring the website works well and is secure. You can find the full Test Plan document [here](<https://docs.google.com/document/d/1WxQhFqUXna3tx6VtxouM0g9-v3kacCM5cG6HChtYZOM/edit?usp=sharing>)
 
 ## Test Scenarios :
 The test scenarios cover various aspects of the Thirsty Wine website, ensuring that key features like user registration, login, and password recovery work as expected. These scenarios guide the testing process to validate both functionality and usability.
