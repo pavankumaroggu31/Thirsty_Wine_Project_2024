@@ -101,3 +101,201 @@ Google docs
 Xmind Map
 
 Google Drive
+
+ICE POT Prompt
+
+I – Instruction
+
+Generate a complete, production-ready automation framework for the
+Login functionality using Playwright with TypeScript. Implement the
+framework using the Page Object Model (POM) design pattern and follow
+industry-standard coding practices. The code should be modular,
+reusable, maintainable, and scalable with proper assertions, error
+handling, logging, and explicit waits.
+
+
+C – Context
+
+Application Details:
+
+Application URL: https://taskflow-prod.netlify.app/dashboard
+
+Login Credentials
+
+Email: shubham.kumar@braincellinfotech.ai
+Password: Braincell@999
+
+Automation Flow:
+
+Launch the browser.
+Navigate to the application.
+Verify the Login page is displayed.
+Enter the email address.
+Enter the password.
+Click the Login button.
+Verify successful login by validating the Dashboard or another unique
+post-login element.
+Capture screenshots on failure.
+Close the browser after test execution.
+
+Framework Requirements:
+
+Playwright with TypeScript
+Page Object Model (POM)
+Separate Page Classes
+Test Data Management
+Configuration Management
+Environment Support
+Reusable utility methods
+Meaningful assertions
+Proper waits (avoid hard-coded waits)
+Scalable folder structure
+
+
+E – Example
+
+Expected Project Structure
+
+playwright-framework/
+
+│
+
+├── pages/
+
+│   └── LoginPage.ts
+
+│
+
+├── tests/
+
+│   └── login.spec.ts
+
+│
+
+├── fixtures/
+
+│   └── testData.ts
+
+│
+
+├── utils/
+
+│   ├── constants.ts
+
+│   └── helper.ts
+
+│
+
+├── playwright.config.ts
+
+├── package.json
+
+├── tsconfig.json
+
+└── README.md
+
+Example Page Object Methods
+
+navigate()
+
+
+enterEmail(email: string)
+
+
+enterPassword(password: string)
+
+
+clickLogin()
+
+
+verifySuccessfulLogin()
+
+Example Test Flow
+
+Login Test
+
+
+→ Launch Browser
+
+
+→ Navigate to Application
+
+
+→ Login using valid credentials
+
+
+→ Verify Dashboard
+
+
+→ Capture Screenshot on Failure
+
+
+→ Close Browser
+
+
+P – Persona
+
+Act as a Senior Playwright Automation Architect with 10+ years of
+experience in building enterprise-grade automation frameworks using
+Playwright and TypeScript.
+
+Follow industry best practices including:
+
+Page Object Model (POM)
+SOLID Principles
+DRY (Don't Repeat Yourself)
+Clean Code Architecture
+Reusable Components
+TypeScript Best Practices
+Explicit Wait Strategies
+Robust Assertions
+Centralized Locators
+Configuration-driven Framework
+Environment Variable Support
+Proper Error Handling
+Logging and Reporting Ready Structure
+Easy Integration with CI/CD pipelines (GitHub Actions, Azure DevOps, Jenkins)
+
+Write code that is clean, scalable, production-ready, and easy to maintain.
+
+
+O – Output Format
+
+Generate the response in the following order:
+
+Project Folder Structure
+Prerequisites
+Required Dependencies
+Installation Commands
+Playwright Configuration (playwright.config.ts)
+TypeScript Configuration (tsconfig.json)
+Test Data File
+Utility Files
+Login Page Object (LoginPage.ts)
+Login Test (login.spec.ts)
+Explanation of Each File
+Commands to Execute the Tests
+Expected Test Execution Output
+Framework Best Practices Followed
+Suggestions for Future Enhancements
+
+Use separate Markdown code blocks for each file with the appropriate
+language syntax highlighting (typescript, json, bash, etc.).
+
+
+T – Task
+
+Build a complete Playwright automation framework in TypeScript to
+automate the Login functionality of the provided application using the
+Page Object Model (POM).
+
+The framework should:
+
+Be executable with minimal setup.
+Follow enterprise-level automation standards.
+Use reusable page objects.
+Include meaningful assertions.
+Handle failures gracefully.
+Support future scalability.
+Be easy to extend for additional test cases.
+Follow Playwright and TypeScript best practices throughout the implementation.
