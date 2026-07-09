@@ -1,0 +1,462 @@
+You are a Senior SDET Automation Architect with 15+ years of experience.
+
+IMPORTANT:
+Do NOT create a new Playwright framework.
+
+I already have a working Playwright + TypeScript framework.
+
+Login automation is completed successfully.
+
+Extend my existing framework without breaking any existing code.
+
+Do not modify Login unless absolutely necessary.
+
+Follow the existing folder structure and coding standards.
+
+======================================================
+CURRENT FRAMEWORK
+======================================================
+
+Already available:
+
+✓ Login Page
+✓ Dashboard Page
+✓ BasePage
+✓ Playwright Configuration
+✓ Environment Support
+✓ Helpers
+✓ POM Structure
+✓ Reports
+✓ Login Tests
+
+Use these existing classes wherever possible.
+
+Do not duplicate code.
+
+======================================================
+GOAL
+======================================================
+
+Implement the complete Admin Panel module only.
+
+URL
+
+/admin
+
+Admin Panel is accessible ONLY for Super Admin.
+
+Members should not have access.
+
+Framework should support role-based execution.
+
+======================================================
+ADMIN PANEL FUNCTIONALITY
+======================================================
+
+The Admin Panel contains two major sections.
+
+1. Users
+
+2. Teams
+
+======================================================
+USERS MODULE
+======================================================
+
+Create reusable methods for:
+
+Navigate to Admin Panel
+
+Verify Admin Page Loaded
+
+Verify URL
+
+Verify Users Tab
+
+Scroll Users Table
+
+Find User
+
+Create Admin User
+
+Create Member User
+
+Edit User
+
+Update Display Name
+
+Update User Role
+
+Reset Password
+
+Save Changes
+
+Cancel Changes
+
+Delete User
+
+Remove From Organization
+
+Verify User Exists
+
+Verify User Removed
+
+======================================================
+USER CREATION
+======================================================
+
+Create User Form contains
+
+Email
+
+Password
+
+Display Name
+
+Role Dropdown
+
+Admin
+
+Member
+
+Create User Button
+
+Implement methods for
+
+Enter Email
+
+Enter Password
+
+Enter Display Name
+
+Select Role
+
+Click Create
+
+======================================================
+VALIDATIONS
+======================================================
+
+Mandatory validation
+
+Invalid Email
+
+Empty Email
+
+Empty Password
+
+Password Less Than 8 Characters
+
+Invalid Password Format
+
+Duplicate Email
+
+======================================================
+SUCCESS TOASTS
+======================================================
+
+Validate Toast Messages
+
+Member Ready
+
+User updated
+
+Password reset
+
+User removed from organization
+
+======================================================
+EDIT USER
+======================================================
+
+Open Three Dot Menu
+
+Click Edit
+
+Verify Edit Modal
+
+Update Display Name
+
+Update Role
+
+Change Password
+
+Confirm Password
+
+Save
+
+Cancel
+
+Validate Success Toast
+
+======================================================
+DELETE USER
+======================================================
+
+Open Three Dot Menu
+
+Click Remove From Organization
+
+Confirm Delete
+
+Validate Success Toast
+
+Verify User Removed
+
+======================================================
+TEAM MODULE
+======================================================
+
+Navigate Teams Tab
+
+Create Team
+
+Delete Team
+
+Open Team
+
+Verify Team Created
+
+Verify Team Deleted
+
+======================================================
+ADD MEMBERS TO TEAM
+======================================================
+
+Click Add Member
+
+Open Dropdown
+
+Dropdown should display created users
+
+Select User
+
+Click Add Member
+
+Verify User Added
+
+Delete Member
+
+Verify User Removed
+
+======================================================
+FRAMEWORK REQUIREMENTS
+======================================================
+
+Do NOT hardcode test data.
+
+Everything must come from JSON.
+
+Create JSON files such as
+
+users.json
+
+teams.json
+
+Store reusable values only.
+
+======================================================
+COMMON UTILITIES
+======================================================
+
+Move repeated code into reusable helpers.
+
+Examples
+
+ToastHelper
+
+DropdownHelper
+
+TableHelper
+
+ModalHelper
+
+NavigationHelper
+
+UIActions
+
+WaitUtils
+
+AssertionHelper
+
+Logger
+
+RandomData
+
+JsonReader
+
+Do NOT duplicate Playwright code.
+
+======================================================
+PAGE OBJECTS
+======================================================
+
+Only locators and business methods.
+
+No assertions inside Page Objects.
+
+Suggested Pages
+
+AdminPage
+
+UsersPage
+
+TeamsPage
+
+======================================================
+TESTS
+======================================================
+
+Keep assertions only inside test files.
+
+Generate test files separately.
+
+Admin tests should include
+
+Create Admin User
+
+Create Member User
+
+Mandatory Validation
+
+Edit User
+
+Reset Password
+
+Delete User
+
+Create Team
+
+Delete Team
+
+Add Member
+
+Remove Member
+
+======================================================
+ROLE SUPPORT
+======================================================
+
+Create separate execution support.
+
+Super Admin
+
+Member
+
+Super Admin should execute Admin module.
+
+Member should never execute Admin module.
+
+======================================================
+LOGGING
+======================================================
+
+Every reusable function should log.
+
+Example
+
+Opening Admin Panel
+
+Creating Member
+
+Editing User
+
+Deleting User
+
+Creating Team
+
+Adding Member
+
+Removing Member
+
+======================================================
+WAIT STRATEGY
+======================================================
+
+Never use waitForTimeout()
+
+Use Playwright assertions
+
+Explicit waits
+
+Locator waits
+
+======================================================
+LOCATOR STRATEGY
+======================================================
+
+Priority
+
+data-testid
+
+getByRole
+
+getByLabel
+
+getByPlaceholder
+
+CSS
+
+XPath only if absolutely necessary.
+
+======================================================
+ERROR HANDLING
+======================================================
+
+Every common method should
+
+Log failure
+
+Take Screenshot
+
+Throw meaningful error
+
+======================================================
+OUTPUT
+======================================================
+
+Step 1
+
+Review my current framework.
+
+Explain what should be reused.
+
+Do NOT regenerate Login.
+
+Step 2
+
+Show the updated folder structure.
+
+Step 3
+
+Generate only the new files required for Admin Panel.
+
+Step 4
+
+Generate common reusable classes first.
+
+Step 5
+
+Generate Page Objects.
+
+Step 6
+
+Generate JSON Test Data.
+
+Step 7
+
+Generate Fixtures if required.
+
+Step 8
+
+Generate Admin Tests.
+
+Step 9
+
+Review the code and remove duplicate logic.
+
+Follow SOLID Principles.
+
+Follow DRY Principle.
+
+Framework should be scalable because next I will implement Projects, Tasks, Dashboard and remaining modules.
