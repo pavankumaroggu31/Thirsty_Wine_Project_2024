@@ -299,3 +299,435 @@ Handle failures gracefully.
 Support future scalability.
 Be easy to extend for additional test cases.
 Follow Playwright and TypeScript best practices throughout the implementation.
+
+Task creation Prompt in Taskflow :
+
+Continue extending my existing Playwright + TypeScript automation framework.
+
+=========================================================
+IMPORTANT
+=========================================================
+
+Before generating any code, review the entire existing framework.
+
+Follow all existing Cursor Rules.
+
+Follow the existing framework architecture.
+
+Follow the same coding standards already used for Login and Admin Panel.
+
+Do NOT create a new framework.
+
+Do NOT modify or break any existing working functionality.
+
+Do NOT regenerate Login.
+
+Do NOT regenerate Admin Panel.
+
+Review the entire project before generating any new code.
+
+Search the existing framework for reusable implementations before creating any new file, class or method.
+
+Specifically review and reuse if available:
+
+• BasePage
+• Common Helpers
+• UI Actions
+• Wait Utilities
+• Assertion Helpers
+• Logger
+• JSON Reader
+• Environment Configuration
+• Existing Page Objects
+• Existing Components
+• Existing Utilities
+• Existing Enums
+• Existing Interfaces
+• Existing Test Data Structure
+• Existing Common Methods
+
+If an implementation already exists, reuse or extend it.
+
+Do NOT duplicate code.
+
+Do NOT duplicate locators.
+
+Do NOT duplicate helper methods.
+
+Do NOT duplicate Playwright actions.
+
+Keep the framework clean, reusable, scalable and production-ready.
+
+Follow
+
+• Page Object Model
+• SOLID Principles
+• DRY Principle
+• Clean Code
+• TypeScript Best Practices
+
+=========================================================
+TASK
+=========================================================
+
+Implement ONLY the Task Creation module.
+
+Do not implement any other module.
+
+=========================================================
+PROJECT OPENING
+=========================================================
+
+Project navigation is already implemented.
+
+Search the existing framework.
+
+The reusable method
+
+openFirstProjectFromList()
+
+already exists inside
+
+pages/BoardColumnsPage.ts
+
+Reuse this method after successful login.
+
+Do NOT generate another project selection implementation.
+
+Do NOT generate another BoardColumnsPage.
+
+Do NOT create another project navigation helper.
+
+Simply reuse
+
+openFirstProjectFromList()
+
+Flow should be
+
+Login
+
+↓
+
+openFirstProjectFromList()
+
+↓
+
+Verify Project Opened
+
+↓
+
+Continue with Task Creation
+
+=========================================================
+TASK CREATION
+=========================================================
+
+Task creation supports TWO entry points.
+
+Entry Point 1
+
+Top right
+
+"New Task"
+
+button.
+
+Entry Point 2
+
+"+ Add Task"
+
+button available under every workflow column.
+
+Columns
+
+• Backlog
+• Todo
+• In Progress
+• In Review
+• Done
+
+Only popup opening is different.
+
+Once the popup opens,
+
+both entry points must use the SAME reusable implementation.
+
+Do NOT duplicate task creation logic.
+
+=========================================================
+TASK CREATION POPUP
+=========================================================
+
+Implement the complete Create Task popup.
+
+Fields
+
+• Task Title
+• Description
+• Column
+• Priority
+• Due Date
+• Assignee
+• Attachments
+• Depends On Other Tasks
+• Create Task
+• Cancel
+
+=========================================================
+TASK TITLE
+=========================================================
+
+Create reusable method
+
+enterTaskTitle()
+
+=========================================================
+DESCRIPTION
+=========================================================
+
+Create reusable method
+
+enterDescription()
+
+=========================================================
+COLUMN
+=========================================================
+
+Support
+
+• Backlog
+• Todo
+• In Progress
+• In Review
+• Done
+
+Create reusable method
+
+selectColumn(column)
+
+Reuse existing dropdown helper if available.
+
+=========================================================
+PRIORITY
+=========================================================
+
+Support
+
+• Low
+• Medium
+• High
+• Urgent
+
+Create reusable method
+
+selectPriority(priority)
+
+Reuse existing dropdown helper if available.
+
+=========================================================
+DUE DATE
+=========================================================
+
+Support BOTH methods.
+
+Method 1
+
+Manual date entry.
+
+Method
+
+enterDueDate()
+
+Method 2
+
+Calendar picker.
+
+Calendar should support
+
+• Today
+• Clear
+• Previous Month
+• Next Month
+• Month Dropdown
+• Year Dropdown
+• Date Selection
+
+Create reusable method
+
+selectDueDateFromCalendar(day, month, year)
+
+Reuse any existing calendar helper if available.
+
+Do NOT duplicate calendar logic.
+
+=========================================================
+ASSIGNEE
+=========================================================
+
+Assignee list is dynamic.
+
+Implement reusable method
+
+selectAssignee(name)
+
+Reuse existing searchable dropdown implementation if available.
+
+=========================================================
+ATTACHMENTS
+=========================================================
+
+Support uploading
+
+• PDF
+• PNG
+• JPG
+• JPEG
+• GIF
+• WEBP
+• CSV
+• XLS
+• XLSX
+
+Implement reusable method
+
+uploadAttachment(filePath)
+
+Use Playwright setInputFiles().
+
+=========================================================
+DEPENDS ON OTHER TASKS
+=========================================================
+
+This is optional.
+
+Implement reusable methods
+
+searchDependentTask(taskName)
+
+selectDependentTask(taskName)
+
+Reuse existing searchable dropdown helper if available.
+
+=========================================================
+CREATE TASK
+=========================================================
+
+Create ONE reusable method
+
+createTask(taskData)
+
+Do NOT pass individual parameters.
+
+Create a TaskData interface.
+
+Read all test data from
+
+taskData.json
+
+TaskData should contain
+
+• title
+• description
+• column
+• priority
+• dueDate
+• assignee
+• attachment
+• dependsOnTask
+• entryMethod
+
+=========================================================
+VERIFICATION
+=========================================================
+
+After clicking Create Task
+
+Verify
+
+• Success Toast Message
+• Task Card Created Successfully
+• Task Title
+• Column
+• Priority
+• Assignee
+• Due Date
+
+=========================================================
+TEST DATA
+=========================================================
+
+Create
+
+taskData.json
+
+Include
+
+Positive Test Data
+
+Minimal Required Data
+
+Different Priorities
+
+Different Columns
+
+Attachment Data
+
+Dependency Data
+
+=========================================================
+FRAMEWORK EXPECTATIONS
+=========================================================
+
+Before creating any new helper or class,
+
+search the existing framework first.
+
+If an implementation already exists,
+
+reuse it.
+
+Only create new code when absolutely necessary.
+
+Keep methods small.
+
+Keep page objects clean.
+
+Do NOT keep assertions inside page objects.
+
+Assertions should remain inside test files.
+
+Follow existing project folder structure.
+
+Follow existing naming conventions.
+
+Preserve backward compatibility.
+
+Do NOT modify Login.
+
+Do NOT modify Admin Panel.
+
+=========================================================
+EXPECTED OUTPUT
+=========================================================
+
+1. Review the existing framework.
+
+2. Explain what existing classes and methods will be reused.
+
+3. Explain whether any new helper is actually required.
+
+4. Generate only the new files required for Task Creation.
+
+5. Reuse openFirstProjectFromList() from BoardColumnsPage.ts.
+
+6. Generate TaskModal page object.
+
+7. Generate TaskData interface.
+
+8. Generate taskData.json.
+
+9. Generate task-creation.spec.ts.
+
+10. Review the generated code and remove any duplicate logic before completing the response.
+
+Generate enterprise-level production-ready code following the existing framework without breaking any current implementation.
