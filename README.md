@@ -302,430 +302,341 @@ Follow Playwright and TypeScript best practices throughout the implementation.
 
 Continue extending my existing Playwright + TypeScript automation framework.
 
-=========================================================
+Implement the complete Task Creation workflow using the existing Playwright TypeScript POM framework.
+
+==================================================================
 IMPORTANT
-=========================================================
+==================================================================
 
-Before generating any code, review the entire existing framework.
+- Review the existing framework before generating any code.
+- Follow the existing Cursor Rules.
+- Follow the existing Playwright TypeScript POM architecture.
+- Reuse existing Page Objects, helper methods, utilities, BasePage, locators and reusable components wherever possible.
+- Search the existing framework before creating any new methods.
+- Create new methods only if an equivalent reusable implementation does not already exist.
+- Do NOT modify or break any existing working functionality.
+- Do NOT regenerate Login.
+- Do NOT regenerate Admin Panel.
+- Do NOT regenerate Project Navigation.
+- Do NOT duplicate business logic.
+- Keep the implementation modular, reusable and maintainable.
 
-Follow all existing Cursor Rules.
-
-Follow the existing framework architecture.
-
-Follow the same coding standards already used for Login and Admin Panel.
-
-Do NOT create a new framework.
-
-Do NOT modify or break any existing working functionality.
-
-Do NOT regenerate Login.
-
-Do NOT regenerate Admin Panel.
-
-Review the entire project before generating any new code.
-
-Search the existing framework for reusable implementations before creating any new file, class or method.
-
-Specifically review and reuse if available:
-
-• BasePage
-• Common Helpers
-• UI Actions
-• Wait Utilities
-• Assertion Helpers
-• Logger
-• JSON Reader
-• Environment Configuration
-• Existing Page Objects
-• Existing Components
-• Existing Utilities
-• Existing Enums
-• Existing Interfaces
-• Existing Test Data Structure
-• Existing Common Methods
-
-If an implementation already exists, reuse or extend it.
-
-Do NOT duplicate code.
-
-Do NOT duplicate locators.
-
-Do NOT duplicate helper methods.
-
-Do NOT duplicate Playwright actions.
-
-Keep the framework clean, reusable, scalable and production-ready.
-
-Follow
-
-• Page Object Model
-• SOLID Principles
-• DRY Principle
-• Clean Code
-• TypeScript Best Practices
-
-=========================================================
-TASK
-=========================================================
-
-Implement ONLY the Task Creation module.
-
-Do not implement any other module.
-
-=========================================================
+==================================================================
 PROJECT OPENING
-=========================================================
+==================================================================
 
-Project navigation is already implemented.
+Project opening is already implemented.
 
-Search the existing framework.
-
-The reusable method
+- Search the existing framework.
+- Reuse the existing method
 
 openFirstProjectFromList()
 
-already exists inside
+available in
 
 pages/BoardColumnsPage.ts
 
-Reuse this method after successful login.
+Requirements
 
-Do NOT generate another project selection implementation.
+- Do NOT create another project selection method.
+- Do NOT create another BoardColumnsPage.
+- Reuse the existing implementation.
 
-Do NOT generate another BoardColumnsPage.
+Flow
 
-Do NOT create another project navigation helper.
+- Login.
+- Call openFirstProjectFromList().
+- Verify the first project is opened successfully.
+- Continue with Task Creation.
 
-Simply reuse
+==================================================================
+COUNT EXISTING TASKS
+==================================================================
 
-openFirstProjectFromList()
+Count ONLY the visible tasks present in
 
-Flow should be
+- To Do
+- In Progress
+- In Review
 
-Login
+Ignore
 
-↓
+- Done
 
-openFirstProjectFromList()
+Calculate
 
-↓
+ExistingTaskCount =
+ToDo + InProgress + InReview
 
-Verify Project Opened
+Store this value.
 
-↓
+Use this value to decide how many new tasks need to be created.
 
-Continue with Task Creation
+==================================================================
+TASK CREATION DECISION
+==================================================================
 
-=========================================================
-TASK CREATION
-=========================================================
-
-Task creation supports TWO entry points.
-
-Entry Point 1
-
-Top right
-
-"New Task"
-
-button.
-
-Entry Point 2
-
-"+ Add Task"
-
-button available under every workflow column.
-
-Columns
-
-• Backlog
-• Todo
-• In Progress
-• In Review
-• Done
-
-Only popup opening is different.
-
-Once the popup opens,
-
-both entry points must use the SAME reusable implementation.
-
-Do NOT duplicate task creation logic.
-
-=========================================================
-TASK CREATION POPUP
-=========================================================
-
-Implement the complete Create Task popup.
-
-Fields
-
-• Task Title
-• Description
-• Column
-• Priority
-• Due Date
-• Assignee
-• Attachments
-• Depends On Other Tasks
-• Create Task
-• Cancel
-
-=========================================================
-TASK TITLE
-=========================================================
-
-Create reusable method
-
-enterTaskTitle()
-
-=========================================================
-DESCRIPTION
-=========================================================
-
-Create reusable method
-
-enterDescription()
-
-=========================================================
-COLUMN
-=========================================================
-
-Support
-
-• Backlog
-• Todo
-• In Progress
-• In Review
-• Done
-
-Create reusable method
-
-selectColumn(column)
-
-Reuse existing dropdown helper if available.
-
-=========================================================
-PRIORITY
-=========================================================
-
-Support
-
-• Low
-• Medium
-• High
-• Urgent
-
-Create reusable method
-
-selectPriority(priority)
-
-Reuse existing dropdown helper if available.
-
-=========================================================
-DUE DATE
-=========================================================
-
-Support BOTH methods.
-
-Method 1
-
-Manual date entry.
-
-Method
-
-enterDueDate()
-
-Method 2
-
-Calendar picker.
-
-Calendar should support
-
-• Today
-• Clear
-• Previous Month
-• Next Month
-• Month Dropdown
-• Year Dropdown
-• Date Selection
-
-Create reusable method
-
-selectDueDateFromCalendar(day, month, year)
-
-Reuse any existing calendar helper if available.
-
-Do NOT duplicate calendar logic.
-
-=========================================================
-ASSIGNEE
-=========================================================
-
-Assignee list is dynamic.
-
-Implement reusable method
-
-selectAssignee(name)
-
-Reuse existing searchable dropdown implementation if available.
-
-=========================================================
-ATTACHMENTS
-=========================================================
-
-Support uploading
-
-• PDF
-• PNG
-• JPG
-• JPEG
-• GIF
-• WEBP
-• CSV
-• XLS
-• XLSX
-
-Implement reusable method
-
-uploadAttachment(filePath)
-
-Use Playwright setInputFiles().
-
-=========================================================
-DEPENDS ON OTHER TASKS
-=========================================================
-
-This is optional.
-
-Implement reusable methods
-
-searchDependentTask(taskName)
-
-selectDependentTask(taskName)
-
-Reuse existing searchable dropdown helper if available.
-
-=========================================================
-CREATE TASK
-=========================================================
-
-Create ONE reusable method
-
-createTask(taskData)
-
-Do NOT pass individual parameters.
-
-Create a TaskData interface.
-
-Read all test data from
-
-taskData.json
-
-TaskData should contain
-
-• title
-• description
-• column
-• priority
-• dueDate
-• assignee
-• attachment
-• dependsOnTask
-• entryMethod
-
-=========================================================
-VERIFICATION
-=========================================================
-
-After clicking Create Task
-
-Verify
-
-• Success Toast Message
-• Task Card Created Successfully
-• Task Title
-• Column
-• Priority
-• Assignee
-• Due Date
-
-=========================================================
-TEST DATA
-=========================================================
+IF ExistingTaskCount == 0
 
 Create
 
-taskData.json
+- Task 1 using "New Task"
+- Task 2 using "New Task"
+- Task 3 using "+ Add Task"
+- Task 4 using "+ Add Task"
 
-Include
+------------------------------------------------------------
 
-Positive Test Data
+ELSE IF ExistingTaskCount == 1
 
-Minimal Required Data
+Create
 
-Different Priorities
+- Task 1 using "New Task"
+- Task 2 using "New Task"
+- Task 3 using "+ Add Task"
 
-Different Columns
+------------------------------------------------------------
 
-Attachment Data
+ELSE IF ExistingTaskCount == 2
 
-Dependency Data
+Create
 
-=========================================================
-FRAMEWORK EXPECTATIONS
-=========================================================
+- Task 1 using "New Task"
+- Task 2 using "+ Add Task"
 
-Before creating any new helper or class,
+------------------------------------------------------------
 
-search the existing framework first.
+ELSE
 
-If an implementation already exists,
+ExistingTaskCount >= 3
 
-reuse it.
+Always create
 
-Only create new code when absolutely necessary.
+- Task 1 using "New Task"
+- Task 2 using "+ Add Task"
 
-Keep methods small.
+Reason
 
-Keep page objects clean.
+- Both task creation methods must always be validated.
+- Do NOT skip either task creation method.
+- Do NOT delete any existing tasks.
 
-Do NOT keep assertions inside page objects.
+==================================================================
+TASK 1 CREATION
+==================================================================
 
-Assertions should remain inside test files.
+Open the Create Task popup using
 
-Follow existing project folder structure.
+- New Task button
 
-Follow existing naming conventions.
+Fill the following fields
 
-Preserve backward compatibility.
+- Task Title
+- Description
+- Column
+- Priority
+- Assignee
 
-Do NOT modify Login.
+Due Date
 
-Do NOT modify Admin Panel.
+- Click inside the Due Date input field.
+- Manually type the date.
+- Supported format
 
-=========================================================
-EXPECTED OUTPUT
-=========================================================
+dd-mm-yyyy
 
-1. Review the existing framework.
+- Do NOT open the calendar popup.
 
-2. Explain what existing classes and methods will be reused.
+Attachment
 
-3. Explain whether any new helper is actually required.
+- Upload
 
-4. Generate only the new files required for Task Creation.
+sample.pdf
 
-5. Reuse openFirstProjectFromList() from BoardColumnsPage.ts.
+Dependency
 
-6. Generate TaskModal page object.
+- Do NOT configure any dependency.
 
-7. Generate TaskData interface.
+Click
 
-8. Generate taskData.json.
+- Create Task
 
-9. Generate task-creation.spec.ts.
+Verify
 
-10. Review the generated code and remove any duplicate logic before completing the response.
+- Success toast displayed.
+- Task created successfully.
 
-Generate enterprise-level production-ready code following the existing framework without breaking any current implementation.
+Store
+
+- Task 1 Title
+
+==================================================================
+TASK 2 CREATION
+==================================================================
+
+Open the Create Task popup using
+
+- + Add Task
+
+Fill
+
+- Task Title
+- Description
+- Column
+- Priority
+- Assignee
+
+Due Date
+
+- Click ONLY the Calendar icon.
+- Verify the calendar popup opens.
+- Verify the Month-Year selector is displayed at the TOP LEFT of the calendar.
+- Click the Month-Year selector.
+- Select the required Year.
+- Select the required Month.
+- Select the required Date.
+- Verify the selected date is populated into the Due Date field.
+- Verify the calendar popup closes automatically.
+- Do NOT navigate between years using Previous or Next arrows.
+
+Attachment
+
+Upload
+
+- sample.png
+
+OR
+
+- sample.xlsx
+
+Dependency
+
+Configure ONE dependency.
+
+Dependency can be
+
+- Task 1 created during this automation
+
+OR
+
+- Any existing task available in the current project.
+
+Either option is acceptable.
+
+Click
+
+- Create Task
+
+Verify
+
+- Success toast displayed.
+- Task created successfully.
+
+Store
+
+- Task 2 Title
+
+==================================================================
+TODAY BUTTON VALIDATION
+==================================================================
+
+For Task 3 or Task 4 (if created)
+
+- Open Create Task popup.
+- Click the Calendar icon.
+- Verify calendar popup opens.
+- Click the Today button.
+- Verify today's date is automatically populated into the Due Date field.
+- Verify the calendar popup closes automatically.
+
+Do NOT validate the Clear button.
+
+==================================================================
+ATTACHMENT UPLOAD
+==================================================================
+
+Maintain reusable attachment files inside
+
+test-data/
+    attachments/
+
+Files
+
+- sample.pdf
+- sample.csv
+- sample.xlsx
+- sample.jpg
+- sample.png
+- sample.gif
+- sample.webp
+
+Requirements
+
+- Do NOT use Desktop path.
+- Do NOT use Downloads path.
+- Do NOT use Documents path.
+- Do NOT use absolute local paths.
+- Always use project-relative paths.
+
+Create one reusable helper
+
+uploadAttachment(fileName)
+
+Reuse this helper for every upload.
+
+==================================================================
+DEPENDENCY
+==================================================================
+
+Implement reusable dependency methods.
+
+Support
+
+- Search dependent task.
+- Select dependent task.
+- Verify dependent task selected successfully.
+
+Reuse existing searchable dropdown helper if available.
+
+==================================================================
+VALIDATIONS
+==================================================================
+
+Verify
+
+- Create Task popup opens successfully.
+- Success toast displayed.
+- Task card created successfully.
+- Task title displayed correctly.
+- Column saved correctly.
+- Priority saved correctly.
+- Assignee saved correctly.
+- Due Date saved correctly.
+- Attachment uploaded successfully.
+- Dependency saved successfully.
+- Calendar popup behaves correctly.
+- Month-Year selector works correctly.
+- Today button works correctly.
+
+==================================================================
+CODE QUALITY
+==================================================================
+
+- Reuse existing Page Objects.
+- Reuse existing helper methods.
+- Reuse existing locators.
+- Reuse existing utilities.
+- Reuse existing common methods.
+- Create new helper methods only if required.
+- Do NOT duplicate Playwright code.
+- Do NOT duplicate dropdown logic.
+- Do NOT duplicate calendar logic.
+- Do NOT duplicate attachment upload logic.
+- Do NOT duplicate dependency logic.
+- Use explicit waits.
+- Avoid hard-coded waits.
+- Use Playwright assertions.
+- Keep the implementation modular.
+- Keep the implementation maintainable.
+- Follow the existing Playwright TypeScript POM framework.
+- Generate only the new code required for this workflow.
