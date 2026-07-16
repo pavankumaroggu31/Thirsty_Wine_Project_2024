@@ -640,3 +640,430 @@ CODE QUALITY
 - Keep the implementation maintainable.
 - Follow the existing Playwright TypeScript POM framework.
 - Generate only the new code required for this workflow.
+
+Task Quick View & Full Details Automation
+IMPORTANT
+Continue from the existing Drag & Drop automation.
+Do NOT start from Login again.
+Continue from the existing Board screen after Drag & Drop.
+Do NOT modify any existing working code.
+Follow the existing Playwright TypeScript POM framework.
+Follow all existing Cursor Rules.
+Reuse existing Page Objects, helper methods, locators, utilities and assertions wherever possible.
+Search the framework before creating any new methods.
+Create new methods only if an equivalent reusable method does not already exist.
+Avoid duplicate business logic.
+Keep the implementation modular, reusable and maintainable.
+EXECUTION FLOW
+Continue from the existing Drag & Drop automation.
+Click any available Task Card from the Board.
+Open the Task Quick View.
+Complete every Quick View functionality.
+Click Full Details.
+Complete every Full Details functionality.
+Save all modifications.
+Return back to the Board.
+Finally delete the automation task created during execution.
+TASK QUICK VIEW
+Verify Task Information
+
+Verify the following information is displayed correctly.
+
+Task Name
+Project Name
+Priority
+
+Assert that all values are visible and populated.
+
+ASSIGNEE
+
+Reuse the existing Assignee implementation.
+
+Perform the following:
+
+Verify current assignee is displayed.
+Change assignee.
+Save changes.
+Assert updated assignee is displayed.
+Assert updated assignee is reflected on the Board.
+Verify Activity Log captures the assignee change.
+WORKFLOW COLUMN
+
+Reuse existing Column implementation.
+
+Perform the following:
+
+Change workflow column.
+Save changes.
+Assert updated column is displayed.
+Assert Board reflects the updated column.
+Assert Activity Log records the column change.
+DUE DATE
+
+Do NOT use the Calendar popup.
+
+Calendar icon is currently not working reliably.
+
+Instead:
+
+Click inside the Due Date input field.
+Clear the existing value.
+Manually enter the date in dd-mm-yyyy format.
+Click the Save button.
+Assert the updated Due Date is displayed.
+Assert the Board reflects the updated Due Date.
+Assert the Activity Log records the Due Date change.
+
+Also validate:
+
+Enter a past date.
+Click Save.
+Verify the Overdue indicator is displayed.
+Assert the Overdue label appears correctly.
+
+Do NOT open the Calendar popup in this automation.
+
+SEND MAIL (Admin Only)
+
+Click Send Mail.
+
+Verify the popup opens.
+
+Validate:
+
+Task Name displayed.
+Recipient list displayed.
+Scroll through recipient list.
+Select multiple recipients.
+Subject textbox.
+Message textbox.
+Include Task Link checkbox.
+Cancel button.
+Send Email button.
+Close (X) button.
+
+Perform the following:
+
+Enter Subject.
+Enter Message.
+Select "Include Link to Task".
+Select recipients.
+Click Send Email.
+
+Assert:
+
+Mail sent successfully.
+Success message appears (if available).
+Popup closes successfully.
+DESCRIPTION
+
+Verify description is displayed.
+
+Quick View
+
+Read Only.
+Editing should not be available.
+
+Assert description matches task data.
+
+DEPENDENCIES
+
+Reuse the existing Dependency implementation.
+
+Perform:
+
+Verify Dependency section is displayed.
+Verify dependency count.
+Search for a task.
+Select a dependency.
+Save dependency.
+
+Assert:
+
+Dependency added successfully.
+Dependency count updated.
+Selected dependency displayed.
+
+Validate labels:
+
+Current Task
+
+Waiting to Complete
+
+Dependency Task
+
+Blocks
+
+Assert both labels appear correctly.
+
+VIEW & COMMENT
+
+Click View & Comment.
+
+Verify:
+
+Dependency task opens.
+Task details displayed correctly.
+
+Admin
+
+Can modify the dependency task.
+
+Member
+
+Assigned task -> editable.
+Other user's task -> View Only.
+
+Verify all permissions.
+
+BACK TO ORIGINAL TASK
+
+While viewing the dependency task:
+
+Click Back to Original Task.
+
+Assert:
+
+Original task opens successfully.
+COMMENTS
+
+Reuse existing Comment implementation.
+
+Perform:
+
+Verify Comment textbox.
+Verify Post button disabled initially.
+Enter comment.
+Verify Post button enabled.
+Post comment.
+
+Assert:
+
+Comment displayed.
+Username displayed.
+Timestamp displayed.
+Activity Log records the comment.
+ATTACHMENTS
+
+Reuse existing Attachment helper.
+
+Validate:
+
+Upload
+Preview
+Download
+Delete
+
+Supported formats:
+
+PDF
+CSV
+XLSX
+JPG
+PNG
+GIF
+WEBP
+
+Assert:
+
+File uploaded successfully.
+Preview works.
+Download works.
+Delete works.
+Activity Log records upload and delete actions.
+ACTIVITY LOG
+
+This is a major validation.
+
+Assert every performed action appears correctly.
+
+Examples:
+
+Assignee Changed
+Column Changed
+Due Date Changed
+Dependency Added
+Dependency Removed
+Comment Added
+Attachment Uploaded
+Attachment Deleted
+Mail Sent (if logged)
+
+Also verify:
+
+Due Date Changed Count updates correctly.
+History is displayed in chronological order.
+Username and timestamp are shown for each activity.
+FULL DETAILS
+
+Click Full Details.
+
+Assert Full Details page opens.
+
+Reuse all reusable Quick View methods.
+
+Do NOT duplicate implementation.
+
+TASK NAME
+Edit Task Name.
+Save Changes.
+
+Assert:
+
+Updated Task Name displayed.
+Board reflects updated name.
+Activity Log records Task Name change.
+DESCRIPTION
+Edit Description.
+Save Changes.
+
+Assert:
+
+Updated Description displayed.
+Activity Log updated.
+COLUMN
+
+Reuse existing implementation.
+
+Perform:
+
+Change workflow column.
+Save.
+
+Assert:
+
+Board updated.
+Activity Log updated.
+PRIORITY
+
+Reuse existing implementation.
+
+Perform:
+
+Change Priority.
+Save.
+
+Assert:
+
+Updated Priority displayed.
+Board updated.
+Activity Log updated.
+DUE DATE
+
+Do NOT use Calendar popup.
+
+Instead:
+
+Manually enter date.
+Save Changes.
+
+Assert:
+
+Updated Due Date displayed.
+Activity Log updated.
+Enter past date.
+Verify Overdue indicator appears.
+ASSIGNEE
+
+Reuse existing implementation.
+
+Perform:
+
+Change assignee.
+Save.
+
+Assert:
+
+Updated assignee displayed.
+Board updated.
+Activity Log updated.
+ATTACHMENTS
+
+Reuse existing implementation.
+
+Validate:
+
+Upload
+Preview
+Download
+Delete
+
+Assert Activity Log reflects every action.
+
+DEPENDENCIES
+
+Reuse existing implementation.
+
+Perform:
+
+Search dependency.
+Add dependency.
+Remove dependency.
+
+Assert:
+
+Count updated.
+Waiting to Complete displayed.
+Blocks displayed.
+Activity Log updated.
+DISCUSSION
+
+Reuse existing Comment implementation.
+
+Perform:
+
+Add discussion.
+Save.
+
+Assert:
+
+Comment displayed.
+Activity Log updated.
+SAVE / CANCEL / BACK
+
+Validate:
+
+Save Changes
+Saves every modification.
+Returns correctly.
+Updated data reflected everywhere.
+Cancel
+Discards unsaved changes.
+Back
+Returns to previous page.
+
+Assert each behaves correctly.
+
+DELETE TASK
+
+At the end of automation:
+
+Admin
+
+Delete the automation-created task.
+Confirm deletion.
+Assert task removed from Board.
+
+Member
+
+Verify Delete option is not available.
+FINAL ASSERTIONS
+
+Verify every modification is reflected consistently across:
+
+Quick View
+Full Details
+Board
+Activity Log
+
+Ensure every feature performs both the action and the corresponding assertion. Do not skip validations after performing operations.
+
+CODE QUALITY
+Reuse existing Page Objects, helpers, locators and utilities.
+Do NOT rewrite functionality that already exists (Assignee, Column, Due Date, Dependencies, Comments, Attachments, Activity Log).
+Only add Quick View and Full Details specific logic where required.
+Use Playwright assertions.
+Use explicit waits.
+Avoid hard-coded waits.
+Keep methods reusable, modular and maintainable.
+Follow the existing Playwright TypeScript POM framework and project architecture.
